@@ -9,11 +9,11 @@ Static site, no framework. Hero pills and the basketball hoop use [Matter.js](ht
 - `src/index.html`, `src/style.css`, `src/app.js`: source (all content lives in `app.js`)
 - `icons/`: tool icons (Simple Icons)
 - `build.py`: inlines CSS, JS, vendor libs and icons into one file
-- `dist/`: built site (`index.html` + résumé PDF), ready for any static host
+- `index.html`: built site (generated, do not edit by hand); served with the résumé PDF from the repo root, so it works on GitHub Pages as-is
 
 ## Build and run
 
 ```bash
 python3 build.py
-cd dist && python3 -m http.server 8000
+python3 -m http.server 8000
 ```

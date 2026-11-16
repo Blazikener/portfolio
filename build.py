@@ -6,6 +6,5 @@ for f in (R/'icons').glob('*.svg'):
 h=(R/'src/index.html').read_text()
 for k,v in {'/*CSS*/':(R/'src/style.css').read_text(),'/*MATTER*/':(R/'vendor/matter.min.js').read_text(),'/*LENIS*/':(R/'vendor/lenis.min.js').read_text(),'/*ICONS*/':json.dumps(icons),'/*APP*/':(R/'src/app.js').read_text()}.items():
     h=h.replace(k,v.replace('</script','<\\/script'))
-(R/'dist').mkdir(exist_ok=True);(R/'dist/index.html').write_text(h)
-import shutil;shutil.copy(R/'Yasir_Ziyaudeen_Ahamed_Resume.pdf',R/'dist/')
+(R/'index.html').write_text(h)
 print(len(h))
