@@ -9,30 +9,35 @@ const WORKS=[
  {slug:'marcus',name:'Marcus Intelligence',badge:'Live',year:'2025',line:'Autonomous QA that doesn\'t hallucinate',kicker:'Co-founder & AI engineer · 2025 – now',
   sub:'AI-written tests look impressive, then click buttons that don\'t exist or, worse, submit real payments.',stat:['5,000+','test runs across ~20 web apps'],
   built:'An autonomous QA agent that maps the real page, lets an LLM draft steps, throws out any step it can\'t ground in a real element, and blocks risky actions by policy before running them in a real browser.',
-  result:'~40% less time reviewing results, with screenshot evidence for every failure.',stack:['Python','FastAPI','Playwright','browser-use','OpenAI','PostgreSQL / Supabase','Next.js'],links:[['marcusai.in','https://marcusai.in']]},
+  result:'~40% less time reviewing results, with screenshot evidence for every failure.',stack:['Python','FastAPI','Playwright','browser-use','OpenAI','PostgreSQL / Supabase','Next.js'],links:[['marcusai.in','https://marcusai.in']],img:'marcus'},
+ {slug:'devin-android',name:'Devin for Android',badge:'Open source',year:'2026',line:'A native Android client for Devin',kicker:'Side project · Kotlin · unofficial client',
+  sub:'Devin sessions run for hours, and checking on one meant opening a laptop.',stat:['25','PRs merged in its first two days'],
+  built:'Browse, search and pin sessions, chat in Markdown with retries and attachments, start sessions with repos, playbooks and ACU limits, and reply straight from a notification. API keys live in Android encrypted storage.',
+  result:'Light and dark themes, an offline session cache, and an APK you can install straight from GitHub releases.',stack:['Kotlin','Android','Devin API','GitHub Actions'],
+  links:[['GitHub',GH+'devin-android'],['Download the APK','https://github.com/Blazikener/devin-android/releases/latest/download/devin-android.apk']],img:'devin-android'},
  {slug:'unprompted',name:'Unprompted',badge:'3rd place',year:'2026',line:'Finds creators who already mention your brand',kicker:'Replit × Oriane hackathon · 3rd place',
   sub:'Brands pay creators to talk about them, while the ones who already do it for free go unnoticed.',stat:['Every','match backed by a quote, timestamp and frame'],
   built:'Search across creator videos for spoken brand mentions (including ones never written in captions), with an evidence player that jumps to the exact moment, plus collab and licensing flows for brands and creators.',
-  result:'Placed 3rd at Replit × Oriane, then kept building it into a product with creator, brand and manager dashboards.',stack:['Python','PostgreSQL','Oriane video search','Vanilla JS','Stripe'],links:[['GitHub',GH+'unprompted']]},
+  result:'Placed 3rd at Replit × Oriane, then kept building it into a product with creator, brand and manager dashboards.',stack:['Python','PostgreSQL','Oriane video search','Vanilla JS','Stripe'],links:[['GitHub',GH+'unprompted']],img:'unprompted'},
  {slug:'resolve',name:'Resolve',badge:'Open source',year:'2026',line:'A finance agent that can\'t go rogue',kicker:'Agent · finance ops',
-  sub:'Accounts-payable exceptions eat finance teams\' time, and nobody wants an LLM freely touching invoices and supplier emails.',stat:['8','tool steps max, every case audited'],
-  built:'Deterministic rule checks first, a fixed tool-step budget, a policy gateway with tool allow-lists, supplier emails treated as untrusted input, and UAE e-invoicing credit-note handling.',
-  result:'Every case ends in an auditable resolution packet, and a red-team planner continuously probes the limits.',stack:['Python','FastAPI','OpenAI tool-calling','Pytest'],links:[['GitHub',GH+'resolve-']]},
+  sub:'Accounts-payable exceptions eat finance teams\' time, and nobody wants an LLM freely touching invoices and supplier emails.',stat:['10','tool calls max, every case audited'],
+  built:'Deterministic rule checks first, a hard tool-call budget, a policy gateway with tool allow-lists, supplier emails treated as untrusted input, and UAE e-invoicing credit-note handling.',
+  result:'Every case ends in an auditable resolution packet, and a red-team planner continuously probes the limits.',stack:['Python','FastAPI','OpenAI tool-calling','Pytest'],links:[['GitHub',GH+'resolve-']],img:'resolve'},
  {slug:'uni',name:'University AI assistant',badge:'10,000+ users',year:'2025',line:'RAG assistant for Sathyabama students',kicker:'Client delivery · Martech AI',
   sub:'Students had to dig through scattered university documents to answer simple questions.',stat:['10,000+','students served'],
   built:'A document-grounded RAG assistant: ingestion of university documents, OpenAI embeddings, Pinecone retrieval and answers that stay inside the sources.',
   result:'Shipped to production for the client during my internship at Martech AI.',stack:['Python','LangChain','OpenAI embeddings','Pinecone'],links:[['GitHub',GH+'Sathyabama-ChatBot']]},
- {slug:'mobile-use',name:'mobile-use',badge:'Open source',year:'2026',line:'PRs to an AI agent that drives real phones',kicker:'Open source · minitap-ai/mobile-use (3.2k★)',
-  sub:'I fix the tools I use, upstream.',stat:['3','PRs to mobile-use'],
-  built:'#228 opt-in strict app lock with deterministic foreground checks. #230 honours the resource-ID index when searching the UI tree, for precision taps. #231 experimental Poco UI hierarchies so the agent can operate Android games.',
-  result:'Also PR #49 to CAMB.AI\'s Python SDK, lazy-loading sounddevice so live transcription works without PortAudio.',stack:['Python','Android','UI automation'],
-  links:[['PR #228','https://github.com/minitap-ai/mobile-use/pull/228'],['PR #230','https://github.com/minitap-ai/mobile-use/pull/230'],['PR #231','https://github.com/minitap-ai/mobile-use/pull/231']]},
+ {slug:'oss',name:'Open-source PRs',badge:'Under review',year:'2026',line:'Fixes upstream in the agent tools I use',kicker:'Open source · minitap-ai/mobile-use · CAMB.AI SDK',
+  sub:'I fix the tools I use, upstream.',stat:['4','PRs open upstream'],
+  built:'mobile-use, an AI agent that drives real phones: #228 opt-in strict app lock with deterministic foreground checks. #230 honours the resource-ID index when searching the UI tree, for precision taps. #231 experimental Poco UI hierarchies so the agent can operate Android games.',
+  result:'CAMB.AI Python SDK #49 lazy-loads sounddevice, so live transcription imports on servers without PortAudio.',stack:['Python','Android','UI automation','SDKs'],
+  links:[['mobile-use #228','https://github.com/minitap-ai/mobile-use/pull/228'],['mobile-use #230','https://github.com/minitap-ai/mobile-use/pull/230'],['mobile-use #231','https://github.com/minitap-ai/mobile-use/pull/231'],['CAMB.AI SDK #49','https://github.com/Camb-ai/cambai-python-sdk/pull/49']]},
+];
+const MORE=[
  {slug:'furprint',name:'FurPrint',year:'2026',line:'A search party for lost cats',kicker:'Side project',
   sub:'When a cat goes missing, neighbours want to help but nobody knows where to look.',stat:['1','shared map for the whole search'],
   built:'An evidence-based search zone, shared areas so volunteers don\'t double up, sighting reports and matching for found cats, with moderation and data retention built in.',
   result:'Taken from v1 to production hardening: migrations, moderation, retention and security headers.',stack:['Python','PostgreSQL + PostGIS','Supabase','Docker'],links:[['GitHub',GH+'FurPrint']]},
-];
-const MORE=[
  {slug:'gate',name:'Marcus Gate',year:'2026',line:'Merge gate for cross-tenant data leaks',kicker:'Open source · CI',
   sub:'One tenant reading another tenant\'s data is the bug that ends a B2B company.',stat:['0','cross-tenant reads allowed to merge'],
   built:'A merge gate that fails a pull request when one tenant can read another tenant\'s object, with redacted evidence and an agent handoff.',result:'Runs in CI on every PR.',stack:['Python','GitHub Actions'],links:[['GitHub',GH+'marcus-gate']]},
@@ -43,12 +48,12 @@ const MORE=[
   sub:'48 hours, one theme, one playable game.',stat:['1','game shipped in a weekend'],
   built:'A desert game built for the Abu Dhabi Game Jam.',result:'Shipped and playable at the end of the jam.',stack:['Game jam'],links:[['GitHub',GH+'Farasat-Al-Sahraa']]},
 ];
-const GHOST=['a QA agent that throws out every step it can\'t ground.','a finance agent that can\'t go rogue.','brand-mention search across creator videos.','a search party app for lost cats.','this website.'];
-const TOOLS=[['python','Python'],['typescript','TypeScript'],['fastapi','FastAPI'],['postgresql','PostgreSQL'],['supabase','Supabase'],['nextdotjs','Next.js'],['openai','OpenAI'],['langchain','LangChain'],[null,'Playwright','Pw'],[null,'Pinecone','Pc'],['docker','Docker'],[null,'Devin','Dv']];
+const GHOST=['a QA agent that throws out every step it can\'t ground.','a finance agent that can\'t go rogue.','brand-mention search across creator videos.','a search party app for lost cats.','a native Android client for Devin.','this website.'];
+const TOOLS=[['python','Python'],['typescript','TypeScript'],['fastapi','FastAPI'],['postgresql','PostgreSQL'],['supabase','Supabase'],['nextdotjs','Next.js'],['openai','OpenAI'],['langchain','LangChain'],[null,'Playwright','Pw'],[null,'Pinecone','Pc'],['docker','Docker'],['kotlin','Kotlin'],['android','Android'],['scikitlearn','scikit-learn'],[null,'Devin','Dv']];
 
 /* ---------- render lists ---------- */
 $('#tools').innerHTML=TOOLS.map(([k,n,ab])=>`<div class="tool"><i>${k&&ICONS[k]?ICONS[k]:`<b>${ab}</b>`}</i>${n}</div>`).join('');
-const card=w=>`<button class="work" data-slug="${w.slug}"><div class="hd"><h3>${w.name}</h3>${w.badge?`<span class="badge">${w.badge}</span>`:''}<span class="y">${w.year}</span></div><p>${w.line}</p><span class="arr">↗</span></button>`;
+const card=w=>`<button class="work" data-slug="${w.slug}"${w.img?` data-img="${w.img}"`:''}><div class="hd"><h3>${w.name}</h3>${w.badge?`<span class="badge">${w.badge}</span>`:''}<span class="y">${w.year}</span></div><p>${w.line}</p><span class="arr">↗</span></button>`;
 $('#works').innerHTML=WORKS.map(card).join('')+
  `<div class="more-list" id="moreList"><div style="display:contents">${MORE.map(card).join('')}<div class="work" id="game" tabindex="0" role="button" aria-label="Bug squash mini game"><canvas></canvas><div class="gt"><h3>More coming soon</h3><p id="gameMsg"><span class="hov">Click or press space to help ship it</span></p></div></div></div></div>`+
  `<button class="more-btn" id="moreBtn" aria-expanded="false"><span>More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg></button>`;
@@ -90,12 +95,26 @@ $$('.fade').forEach(el=>io.observe(el));
 (()=>{const t=$('#ghost .t');let k=0,j=0,del=false;const loop=()=>{const s=GHOST[k];if(!del){t.textContent=s.slice(0,++j);if(j>=s.length){del=true;return setTimeout(loop,1700)}return setTimeout(loop,34)}t.textContent=s.slice(0,--j);if(j<=0){del=false;k=(k+1)%GHOST.length;return setTimeout(loop,300)}setTimeout(loop,16)};
  if(RM)t.textContent=GHOST[0];else setTimeout(loop,1500)})();
 
+/* ---------- hover peek ---------- */
+(()=>{const pk=$('#peek');if(!pk||!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+ const im=$('img',pk);let x=0,y=0,tx=0,ty=0,on=false,raf=0;
+ $$('.work[data-img]').forEach(w=>{const i=new Image();i.src=`img/${w.dataset.img}.webp`});
+ const tick=()=>{x+=(tx-x)*.16;y+=(ty-y)*.16;pk.style.transform=`translate3d(${x}px,${y}px,0)`;raf=(on||Math.abs(tx-x)+Math.abs(ty-y)>.5)?requestAnimationFrame(tick):0};
+ $('#works').addEventListener('pointermove',e=>{const w=e.target.closest('.work[data-img]');tx=e.clientX+24;ty=e.clientY-90;
+  if(w&&!document.body.classList.contains('drawer-open')){const src=`img/${w.dataset.img}.webp`;if(!im.src.endsWith(src))im.src=src;if(!on){if(!pk.classList.contains('on')){x=tx;y=ty}on=true;pk.classList.add('on')}}
+  else if(on){on=false;pk.classList.remove('on')}
+  if(!raf)raf=requestAnimationFrame(tick)});
+ $('#works').addEventListener('pointerleave',()=>{on=false;pk.classList.remove('on')});
+ $('#works').addEventListener('click',()=>{on=false;pk.classList.remove('on')});
+})();
+
 /* ---------- drawer ---------- */
 const ALL=[...WORKS,...MORE];
-function openWork(slug){const w=ALL.find(x=>x.slug===slug);if(!w)return;
- $('#dBody').innerHTML=`<p class="k">${w.kicker}</p><h2 id="dTitle">${w.name}</h2><p class="sub">${w.sub}</p><div class="stat"><b>${w.stat[0]}</b><span>${w.stat[1]}</span></div><dl><dt>What I built</dt><dd>${w.built}</dd><dt>Result</dt><dd>${w.result}</dd></dl><div class="chips">${w.stack.map(s=>`<span>${s}</span>`).join('')}</div><div class="links">${w.links.map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener"><span>→</span>${l}</a>`).join('')}</div>`;
+let lastFocus=null;
+function openWork(slug){const w=ALL.find(x=>x.slug===slug);if(!w)return;lastFocus=document.activeElement;
+ $('#dBody').innerHTML=`<p class="k">${w.kicker}</p><h2 id="dTitle">${w.name}</h2><p class="sub">${w.sub}</p>${w.img?`<figure class="shot"><img src="img/${w.img}.webp" alt="${w.name} screenshot" decoding="async"></figure>`:''}<div class="stat"><b>${w.stat[0]}</b><span>${w.stat[1]}</span></div><dl><dt>What I built</dt><dd>${w.built}</dd><dt>Result</dt><dd>${w.result}</dd></dl><div class="chips">${w.stack.map(s=>`<span>${s}</span>`).join('')}</div><div class="links">${w.links.map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener"><span>→</span>${l}</a>`).join('')}</div>`;
  document.body.classList.add('drawer-open');$('#drawer').setAttribute('aria-hidden','false');lenis&&lenis.stop();$('#drawer .pn').scrollTop=0;setTimeout(()=>$('#drawer .x').focus(),50)}
-function closeDrawer(){document.body.classList.remove('drawer-open');$('#drawer').setAttribute('aria-hidden','true');lenis&&lenis.start()}
+function closeDrawer(){if(!document.body.classList.contains('drawer-open'))return;document.body.classList.remove('drawer-open');lastFocus&&lastFocus.focus&&lastFocus.focus({preventScroll:true});$('#drawer').setAttribute('aria-hidden','true');lenis&&lenis.start()}
 $('#works').addEventListener('click',e=>{const b=e.target.closest('.work[data-slug]');if(b)openWork(b.dataset.slug)});
 $('#drawer .sc').onclick=closeDrawer;$('#drawer .x').onclick=closeDrawer;
 addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawer();closeMenu()}});

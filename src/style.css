@@ -43,6 +43,14 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;backgroun
 .tag span{background:var(--fg);color:var(--bg);font-size:clamp(17px,1.6vw,23px);line-height:1.25;padding:2px 9px;clip-path:inset(0 100% 0 0);transition:clip-path .9s var(--ease)}
 .ready .tag span{clip-path:inset(0 0 0 0)}.ready .tag span:nth-child(2){transition-delay:.15s}
 /* sections */
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+#peek{position:fixed;left:0;top:0;z-index:55;pointer-events:none;will-change:transform}
+#peek i{display:block;width:clamp(260px,22vw,360px);aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:#0f0f0f;border:1px solid var(--border);box-shadow:0 30px 60px rgba(0,0,0,.45);opacity:0;transform:scale(.8) rotate(-3deg);transform-origin:0 50%;transition:opacity .3s,transform .5s var(--out)}
+#peek.on i{opacity:1;transform:none}
+#peek img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.pn .shot{margin:28px 0 0;border-radius:10px;overflow:hidden;border:1px solid var(--border);background:#0f0f0f}.pn .shot img{display:block;width:100%;height:auto}
+#game{grid-column:1/-1;border-right:0!important}
+@media (hover:none),(pointer:coarse){#peek{display:none}}
 section.sec{padding-top:clamp(90px,14vh,150px)}
 .h2{font-size:clamp(44px,5.4vw,78px);font-weight:400;letter-spacing:-.045em;line-height:1;margin-bottom:clamp(60px,10vh,110px)}
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
